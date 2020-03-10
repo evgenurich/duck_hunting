@@ -1,0 +1,158 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+@-webkit-keyframes duckFly {
+    0% {
+     top: 50%;
+     left: -65px;
+   }
+
+    25% {
+    	top: 20%;
+    	left: 25%;
+        -webkit-transform: rotate(10deg);
+                transform: rotate(10deg);
+    }
+
+    50% {
+    	top: 70%;
+    	left: 50%;
+    }
+
+    75% {
+    	top: 25%;
+    	left: 75%;
+    }
+
+    100% {
+        top: 65%;
+        left: 100%;
+  }
+
+
+}
+
+@keyframes duckFly {
+    0% {
+     top: 50%;
+     left: -65px;
+   }
+
+    25% {
+    	top: 20%;
+    	left: 25%;
+        -webkit-transform: rotate(10deg);
+                transform: rotate(10deg);
+    }
+
+    50% {
+    	top: 70%;
+    	left: 50%;
+    }
+
+    75% {
+    	top: 25%;
+    	left: 75%;
+    }
+
+    100% {
+        top: 65%;
+        left: 100%;
+  }
+
+
+}
+
+@keyframes duckDown {
+    0% { top: 0px; }
+    100% { top: 200px; }
+}
+
+
+body {
+    background-image: url(img/bg.png);
+	background-size: cover;
+	/*background-position: center;*/
+	background-repeat: no-repeat;
+}
+
+.map {
+	position: relative;
+
+	height:270px;
+}
+
+.duck {
+	width:63px;
+	height: 63px;
+
+	background-image:url(http://fandelanes.emu-france.info/gif/duck_hunt_bird_big2.gif);
+
+	display: block;
+	position: absolute;
+	left:-70px;
+	transition: all .5s;
+	opacity: 1;
+	transition: 0.3s;
+}
+
+input[type="checkbox"]:checked {
+	counter-increment: score;	
+}
+
+input[type="checkbox"]:checked + .duck {
+    opacity: 0;
+}
+
+.count:after {
+    content: counter(score);
+    position: absolute;
+    left: 50%;
+    bottom: -280px;
+
+    position: absolute;
+
+	font-size: 50px;
+	font-weight: bold;
+	font-family: "Open sans";
+	color: #fff;
+
+}
+
+input {
+	visibility: hidden;
+	left: -999px;
+	z-index: -5;
+}
+
+.duck1 {
+	-webkit-animation: duckFly 3s ease 0s 3 normal;
+	        animation: duckFly 3s ease 0s 3 normal;
+}
+
+.duck1 {
+
+}
+
+.duck2 {
+	-webkit-animation: duckFly 7s linear 2s 3 normal;
+	        animation: duckFly 7s linear 2s 3 normal;
+}
+
+.duck3 {
+	-webkit-animation: duckFly 6s ease-in 4s 1 normal;
+	        animation: duckFly 6s ease-in 4s 1 normal;
+}
+
+
+
+
+
+
+
+
+
+
+
